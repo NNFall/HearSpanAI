@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Сообщить об уязвимости
+    url: https://github.com/NNFall/HearSpanAI/security/advisories/new
+    about: Не публикуйте сведения об уязвимостях и секреты в обычном Issue.

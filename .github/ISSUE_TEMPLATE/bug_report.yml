@@ -1,0 +1,74 @@
+name: Сообщить об ошибке
+description: Ошибка Windows-приложения, аудио, транскрибации или ответа
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Не прикладывайте API-ключи, токены, пароли, полный `.env` или конфиденциальную транскрипцию.
+  - type: input
+    id: version
+    attributes:
+      label: Версия приложения
+      placeholder: Например, 0.2.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Версия Windows
+      options:
+        - Windows 11
+        - Windows 10
+        - Другая
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область
+      options:
+        - Запуск или установка
+        - Микрофон
+        - Системный звук
+        - Relay или соединение
+        - Транскрипция
+        - Полный ответ Gemini
+        - Интерфейс
+        - Настройки или логи
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги воспроизведения
+      placeholder: Опишите действия по порядку.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемый результат
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Фактический результат и статус ошибки
+    validations:
+      required: true
+  - type: textarea
+    id: devices
+    attributes:
+      label: Аудиоустройства
+      description: Укажите типы или публичные названия устройств без серийных номеров.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Проверка приватности
+      options:
+        - label: Я удалил ключи, токены, пароли, персональные данные и транскрипцию.
+          required: true

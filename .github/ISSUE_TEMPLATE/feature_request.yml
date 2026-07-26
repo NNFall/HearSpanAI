@@ -1,0 +1,38 @@
+name: Предложить функцию
+description: Идея для интерфейса, аудио, ответов или рабочего процесса
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Какую проблему нужно решить
+      description: Опишите реальную ситуацию пользователя.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Желаемый результат
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Область продукта
+      options:
+        - Аудио и устройства
+        - Транскрипция
+        - Ответы и контекст
+        - Интерфейс
+        - Настройки
+        - Установка и обновление
+        - Android
+        - Другое
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Дополнительный контекст
