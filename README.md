@@ -6,12 +6,14 @@
   <p>
     <img alt="Статус: активная разработка" src="https://img.shields.io/badge/status-active%20development-2563eb">
     <img alt="Платформа: Windows" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d4">
-    <img alt="Текущая история: 0.1.2" src="https://img.shields.io/badge/history-0.1.2-6b7280">
+    <img alt="Версия: 0.2.0" src="https://img.shields.io/badge/version-0.2.0-2563eb">
     <img alt="Исходный код закрыт" src="https://img.shields.io/badge/source-closed-111827">
   </p>
 
   <p>
-    <a href="ROADMAP.md"><strong>Планы разработки</strong></a>
+    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.0"><strong>Скачать v0.2.0</strong></a>
+    ·
+    <a href="ROADMAP.md">Планы разработки</a>
     ·
     <a href="WORKLOG.md">Журнал работ</a>
     ·
@@ -22,9 +24,9 @@
 </div>
 
 > [!IMPORTANT]
-> HearSpan AI находится в активной переработке интерфейса и инфраструктуры. Публичный установщик появится после ребрендинга приложения и обязательной защиты relay-сервера. Историческая версия `0.1.2` выпускалась под рабочим названием **AppGhost** и публично не распространяется.
+> HearSpan AI `0.2.0` доступен как неподписанная Windows private beta. Relay-инфраструктура пока не рассчитана на конфиденциальные разговоры или публичную нагрузку: перед установкой прочитайте [ограничения релиза](docs/releases/v0.2.0.md) и [политику безопасности](SECURITY.md).
 
-![Текущий интерфейс Windows beta](assets/screenshots/windows-session-beta.png)
+![Интерфейс HearSpan AI 0.2.0](assets/screenshots/hearspan-session-0.2.0.png)
 
 ## Что такое HearSpan AI
 
@@ -57,24 +59,28 @@ flowchart LR
 | Windows-прототип | Проверен на Windows 10/11, включая ноутбук без Python |
 | Микрофон и Windows loopback | Работают в одной сессии |
 | Gemini Live и потоковый текстовый ответ | Работают через private beta relay |
-| Новый бренд HearSpan AI | Выбран, перенос в приложение запланирован |
-| Публичный установщик | Приостановлен до защиты relay и ребрендинга |
+| Новый бренд и адаптивный интерфейс HearSpan AI | Реализованы в `0.2.0` |
+| Windows-установщик | Доступен как неподписанная private beta |
 | Собственный Gemini API-ключ | Поддержка через безопасные настройки запланирована |
 | Android | Исследование после стабилизации Windows-версии |
 
 Подробности: [ROADMAP.md](ROADMAP.md) и [WORKLOG.md](WORKLOG.md).
 
-## Будущая установка
+![Компактный интерфейс HearSpan AI](assets/screenshots/hearspan-compact-0.2.0.png)
 
-Первый публичный установщик будет опубликован только в разделе [Releases](https://github.com/NNFall/HearSpanAI/releases). Python на компьютере пользователя не потребуется. До появления такого релиза файлы, опубликованные от имени HearSpan AI на сторонних сайтах, не считаются официальными.
+## Установка
 
-Планируемая конфигурация:
+Скачайте `HearSpan-Setup-0.2.0.exe` только со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.0). Python на компьютере пользователя не требуется. Установщик создает ярлыки в меню «Пуск» и, по выбору пользователя, на рабочем столе.
 
-1. работа через защищенный relay проекта;
-2. альтернативный прямой режим с собственным Gemini API-ключом;
-3. хранение ключей только локально, без добавления их в Git или диагностические отчеты.
+Текущая конфигурация:
+
+1. основной режим работает через beta relay проекта;
+2. прямой режим Gemini предназначен для владельца собственного API-ключа;
+3. настройки и логи сохраняются локально и совместимы с предыдущей beta AppGhost.
 
 Безопасный шаблон переменных находится в [.env.example](.env.example). Реальные значения никогда не должны публиковаться.
+
+![Настройки HearSpan AI 0.2.0](assets/screenshots/hearspan-settings-0.2.0.png)
 
 ## Стоимость
 
