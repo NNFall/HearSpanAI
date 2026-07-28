@@ -6,12 +6,12 @@
   <p>
     <img alt="Статус: активная разработка" src="https://img.shields.io/badge/status-active%20development-2563eb">
     <img alt="Платформа: Windows" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d4">
-    <img alt="Версия: 0.2.1" src="https://img.shields.io/badge/version-0.2.1-2563eb">
+    <img alt="Версия: 0.3.0" src="https://img.shields.io/badge/version-0.3.0-2563eb">
     <img alt="Исходный код закрыт" src="https://img.shields.io/badge/source-closed-111827">
   </p>
 
   <p>
-    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.1"><strong>Скачать v0.2.1</strong></a>
+    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.3.0"><strong>Скачать v0.3.0</strong></a>
     ·
     <a href="ROADMAP.md">Планы разработки</a>
     ·
@@ -24,9 +24,9 @@
 </div>
 
 > [!IMPORTANT]
-> HearSpan AI `0.2.1` доступен как неподписанная Windows private beta. Relay-инфраструктура пока не рассчитана на конфиденциальные разговоры или публичную нагрузку: перед установкой прочитайте [ограничения релиза](docs/releases/v0.2.1.md) и [политику безопасности](SECURITY.md).
+> HearSpan AI `0.3.0` доступен как неподписанная Windows private beta. Relay-инфраструктура пока не рассчитана на конфиденциальные разговоры или публичную нагрузку: перед установкой прочитайте [ограничения релиза](docs/releases/v0.3.0.md) и [политику безопасности](SECURITY.md).
 
-![Интерфейс HearSpan AI 0.2.1](assets/screenshots/hearspan-session-0.2.1.png)
+![Интерфейс HearSpan AI 0.3.0](assets/screenshots/hearspan-session-0.3.0.png)
 
 ## Что такое HearSpan AI
 
@@ -49,6 +49,8 @@ flowchart LR
 - транскрибация через постоянное WebSocket-соединение;
 - ожидание последних фрагментов речи перед ручным запросом;
 - потоковый Markdown-ответ в отдельной области;
+- защищённое сохранение личного Gemini API key через Windows DPAPI;
+- отдельный capture-visible overlay ответа с прозрачностью и always-on-top;
 - настраиваемые промпты, усиление, mute и горячие клавиши;
 - локальные настройки и диагностические логи.
 
@@ -59,18 +61,18 @@ flowchart LR
 | Windows-прототип | Проверен на Windows 10/11, включая ноутбук без Python |
 | Микрофон и Windows loopback | Работают в одной сессии |
 | Gemini Live и потоковый текстовый ответ | Работают через private beta relay |
-| Новый бренд и адаптивный интерфейс HearSpan AI | Реализованы в `0.2.1` |
+| Новый бренд и адаптивный интерфейс HearSpan AI | Реализованы в `0.3.0` |
 | Windows-установщик | Доступен как неподписанная private beta |
-| Собственный Gemini API-ключ | Можно ввести на текущий запуск; безопасное постоянное хранилище запланировано |
+| Собственный Gemini API-ключ | Работает напрямую; опционально хранится в DPAPI для текущего пользователя Windows |
 | Android | Исследование после стабилизации Windows-версии |
 
 Подробности: [ROADMAP.md](ROADMAP.md) и [WORKLOG.md](WORKLOG.md).
 
-![Компактный интерфейс HearSpan AI](assets/screenshots/hearspan-compact-0.2.1.png)
+![Компактный интерфейс HearSpan AI](assets/screenshots/hearspan-compact-0.3.0.png)
 
 ## Установка
 
-Скачайте `HearSpan-Setup-0.2.1.exe` только со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.1). Python на компьютере пользователя не требуется. Установщик создает ярлыки в меню «Пуск» и, по выбору пользователя, на рабочем столе.
+Скачайте `HearSpan-Setup-0.3.0.exe` только со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.3.0). Python на компьютере пользователя не требуется. Установщик создает ярлыки в меню «Пуск» и, по выбору пользователя, на рабочем столе.
 
 Текущая конфигурация:
 
@@ -80,7 +82,7 @@ flowchart LR
 
 Безопасный шаблон переменных находится в [.env.example](.env.example). Реальные значения никогда не должны публиковаться.
 
-![Настройки аудио HearSpan AI 0.2.1](assets/screenshots/hearspan-settings-audio-0.2.1.png)
+![Режим доступа HearSpan AI 0.3.0](assets/screenshots/hearspan-settings-account-0.3.0.png)
 
 ## Стоимость
 
