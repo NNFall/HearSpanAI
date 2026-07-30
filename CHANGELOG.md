@@ -4,14 +4,50 @@
 
 ## [Unreleased]
 
+Изменений после `0.4.0` пока нет.
+
+## [0.4.0] - 2026-07-30
+
+Коммерческий beta-контур: автоматический trial, персональные ключи, Telegram-бот,
+тестовая YooKassa и защищённый учёт активных минут.
+
+### Added
+
+- 10-минутный trial для новой установки;
+- экран доступа с остатком времени, проверкой, заменой и удалением ключа HearSpan;
+- Telegram-бот с профилем, тарифами Start/Pro, ключами, поддержкой и тестовой оплатой;
+- публичный лендинг, политика конфиденциальности, условия и страница поддержки;
+- серверный control plane для trial, подписок, платежей и metering.
+
 ### Changed
 
-- продолжается проверка Windows loopback с разными гарнитурами и драйверами.
+- relay переведён на защищённый `wss://` и проверяет персональный ключ до запуска Gemini;
+- прямой TCP-порт relay закрыт, публичный доступ проходит через TLS reverse proxy;
+- активное время списывается после готовности Gemini Live с шагом до пяти секунд;
+- transient-сбои control plane обрабатываются ограниченным идемпотентным retry;
+- worker и relay корректно завершаются по `SIGINT`/`SIGTERM` без аварийного traceback.
 
 ### Security
 
-- переход relay на защищенное соединение, обязательную авторизацию и ограничения нагрузки остается приоритетом;
-- ключи и внутренние параметры инфраструктуры исключены из публичных материалов.
+- ключ HearSpan хранится через Windows DPAPI и передаётся только по TLS;
+- Gemini, Telegram, YooKassa и межсервисные секреты не входят в EXE и репозиторий;
+- серверная база не сохраняет транскрипции, промпты и ответы;
+- release-файлы прошли отдельный secret scan.
+
+### Verified
+
+- desktop/relay: `237 passed, 1 skipped`;
+- control plane: `782 passed, 3 skipped`;
+- website: `35 passed`, browser E2E: `15 passed`;
+- реальный trial дошёл до Gemini Live, списал 5 секунд и закрыл lease с остатком 595 секунд;
+- PostgreSQL backup восстановлен в одноразовую БД с совпавшими migration и counts;
+- установщик проверен автономным запуском, тихим обновлением и SHA-256.
+
+### Beta limitations
+
+- YooKassa принудительно работает в test mode, реальные списания отключены;
+- установщик пока не подписан цифровой подписью;
+- совместимость Windows loopback зависит от выбранного аудиоустройства и драйвера.
 
 ## [0.3.0] - 2026-07-28
 
@@ -131,7 +167,8 @@
 - сохранение пользовательских настроек;
 - локальные диагностические логи.
 
-[Unreleased]: https://github.com/NNFall/HearSpanAI/commits/main
+[Unreleased]: https://github.com/NNFall/HearSpanAI/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.4.0
 [0.3.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.3.0
 [0.2.1]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.1
 [0.2.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.2.0

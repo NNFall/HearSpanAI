@@ -21,8 +21,10 @@
 
 - проверьте обычное интернет-соединение;
 - убедитесь, что выбран режим Gemini Relay;
+- откройте **Настройки → Обзор** и проверьте статус trial или персонального ключа;
 - посмотрите крупный статус сессии;
-- `invalid HTTP response`, `connection refused` и `timeout` обычно означают недоступность relay;
+- `KEY_INVALID`, `KEY_EXPIRED` и `ACCESS_EXHAUSTED` относятся к ключу или остатку времени;
+- `invalid HTTP response`, `connection refused` и `timeout` обычно означают временную недоступность relay или сети;
 - доступ к beta relay может быть временно ограничен.
 
 ## Gemini не отвечает

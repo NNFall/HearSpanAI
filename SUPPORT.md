@@ -1,5 +1,7 @@
 # Поддержка
 
+Для обычных вопросов по доступу, ключу и тестовой оплате используйте раздел **Поддержка** в [@HearSpan_bot](https://t.me/HearSpan_bot?start=support). Для воспроизводимых ошибок приложения создавайте GitHub Issue.
+
 ## Сообщить об ошибке
 
 Создайте [Bug report](https://github.com/NNFall/HearSpanAI/issues/new?template=bug_report.yml) и укажите:
