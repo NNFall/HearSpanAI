@@ -6,12 +6,12 @@
   <p>
     <img alt="Статус: private beta" src="https://img.shields.io/badge/status-private%20beta-f59e0b">
     <img alt="Платформа: Windows" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d4">
-    <img alt="Версия: 0.5.0" src="https://img.shields.io/badge/version-0.5.0-2563eb">
+    <img alt="Версия: 0.6.0" src="https://img.shields.io/badge/version-0.6.0-2563eb">
     <img alt="Исходный код закрыт" src="https://img.shields.io/badge/source-closed-111827">
   </p>
 
   <p>
-    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.5.0"><strong>Скачать v0.5.0</strong></a>
+    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.6.0"><strong>Скачать v0.6.0</strong></a>
     ·
     <a href="https://kaigo.space/hearspan-ai/">Сайт</a>
     ·
@@ -24,9 +24,9 @@
 </div>
 
 > [!IMPORTANT]
-> `v0.5.0` — неподписанная Windows private beta. YooKassa работает только в тестовом режиме: реальные списания отключены. Перед установкой прочитайте [ограничения релиза](docs/releases/v0.5.0.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
+> `v0.6.0` — неподписанная Windows private beta. YooKassa работает только в тестовом режиме: реальные списания отключены. Перед установкой прочитайте [ограничения релиза](docs/releases/v0.6.0.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
 
-![Активная сессия HearSpan AI 0.5.0](assets/screenshots/hearspan-session-0.5.0.png)
+![Активная сессия HearSpan AI 0.6.0](assets/screenshots/hearspan-session-0.6.0.png)
 
 ## Что такое HearSpan AI
 
@@ -34,39 +34,39 @@ HearSpan AI одновременно слышит микрофон и систе
 
 Приложение подходит для встреч, обучения, консультаций и технических собеседований. Используйте запись только с необходимым согласием участников и в рамках правил встречи и законодательства вашей страны.
 
-## Что появилось в 0.5.0
+## Что появилось в 0.6.0
 
-- полупрозрачный Answer Overlay с прозрачностью от 45% до 100%;
-- исключение отдельного overlay из поддерживаемого Windows-захвата;
-- локальный индикатор состояния защиты демонстрации;
-- сохранение настройки и повторное применение после изменения режима окна;
+- экран готовности с проверкой доступа, микрофона, системного звука и AI-модели;
+- семь понятных разделов настроек вместо длинного технического списка;
+- состояния аудио `Сигнал`, `Тишина`, `Выкл.` и `Перегруз`;
+- отдельный прогресс запроса без потери статуса активной записи;
+- вкладки ответа и live-совета на компактном экране;
+- безопасный диагностический отчёт без ключей и relay-токенов;
+- короткое меню Telegram-бота с четырьмя основными действиями;
+- явная маркировка тестовой оплаты YooKassa на каждом экране checkout;
+- полупрозрачный Answer Overlay с исключением из поддерживаемого Windows-захвата;
 - автоматический 10-минутный trial для новой установки;
 - персональные ключи HearSpan с остатком доступного времени;
-- получение ключа, профиль, тарифы и поддержка через `@HearSpan_bot`;
 - защищённое WSS-соединение и серверная проверка доступа до запуска Gemini;
-- посекундный учёт активной подключённой сессии;
-- режим BYOK с собственным Gemini API key;
-- сохранение ключей через Windows DPAPI;
-- отдельные панели транскрипции, ответа и live-совета;
 - потоковый Markdown-ответ с учётом накопленного контекста.
 
-![Настройки приватности overlay](assets/screenshots/hearspan-settings-overlay-0.5.0.png)
+![Проверка готовности HearSpan AI](assets/screenshots/hearspan-settings-readiness-0.6.0.png)
 
 ## Быстрый старт
 
-1. Скачайте `HearSpan-Setup-0.5.0.exe` со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.5.0).
+1. Скачайте `HearSpan-Setup-0.6.0.exe` со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.6.0).
 2. Запустите стандартный мастер установки. Python не требуется.
 3. При первом открытии дождитесь автоматической активации 10-минутного trial.
-4. В **Настройки → Аудио и транскрибация** выберите микрофон и устройство, через которое слышен системный звук.
+4. Откройте **Настройки → Готовность** и устраните отмеченные пункты; устройства выбираются в разделе **Звук**.
 5. Начните сессию и проверьте движение обоих индикаторов громкости.
 6. После вопроса нажмите **Запросить ответ** или `Ctrl+Enter`.
-7. После trial получите персональный ключ в [Telegram-боте](https://t.me/HearSpan_bot?start=github) и вставьте его в **Настройки → Обзор**.
+7. После trial получите персональный ключ в [Telegram-боте](https://t.me/HearSpan_bot?start=github) и вставьте его в **Настройки → Доступ и ключи**.
 
 Подробности: [установка](docs/installation.md), [конфигурация](docs/configuration.md) и [диагностика](docs/troubleshooting.md).
 
 ## Приватность Answer Overlay
 
-В **Настройки → Overlay** можно включить отдельное окно ответа, настроить его
+В **Настройки → Окно ответа** можно включить отдельное окно ответа, настроить его
 прозрачность и оставить активным переключатель **Не показывать overlay в
 демонстрации экрана**. Зелёный значок с глазом означает, что Windows приняла
 защиту для этого окна.
@@ -77,7 +77,7 @@ HearSpan AI одновременно слышит микрофон и систе
 демонстрацией проверьте функцию в используемой программе. Это не скрытие
 процесса и не универсальная гарантия для всех программ записи.
 
-![Answer Overlay HearSpan AI](assets/screenshots/hearspan-answer-overlay-0.5.0.png)
+![Answer Overlay HearSpan AI](assets/screenshots/hearspan-answer-overlay-0.6.0.png)
 
 ## Режимы доступа
 
@@ -116,8 +116,8 @@ flowchart LR
 
 ## Проверка релиза
 
-- desktop/relay: `253 passed, 1 skipped`;
-- control plane: `782 passed, 3 skipped`;
+- desktop/relay: `267 passed, 1 skipped`;
+- control plane: `790 passed, 3 skipped`;
 - website: `35 passed`, browser E2E: `15 passed`;
 - реальный путь `trial → WSS → Gemini Live → 5 секунд metering → close` проверен;
 - установщик прошёл автономный запуск, тихое обновление и проверку SHA-256;
@@ -125,7 +125,7 @@ flowchart LR
 - упакованный EXE применил affinity `0x11` только к Answer Overlay;
 - интерфейс проверен от `960x640` до `1920x1080`.
 
-![Настройка аудио](assets/screenshots/hearspan-settings-audio-0.5.0.png)
+![Настройка аудио](assets/screenshots/hearspan-settings-audio-0.6.0.png)
 
 ## Репозиторий
 
