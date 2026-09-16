@@ -6,12 +6,12 @@
   <p>
     <img alt="Статус: private beta" src="https://img.shields.io/badge/status-private%20beta-f59e0b">
     <img alt="Платформа: Windows" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d4">
-    <img alt="Версия: 0.6.0" src="https://img.shields.io/badge/version-0.6.0-2563eb">
+    <img alt="Версия: 0.7.1" src="https://img.shields.io/badge/version-0.7.1-2563eb">
     <img alt="Исходный код закрыт" src="https://img.shields.io/badge/source-closed-111827">
   </p>
 
   <p>
-    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.6.0"><strong>Скачать v0.6.0</strong></a>
+    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.7.1"><strong>Скачать v0.7.1</strong></a>
     ·
     <a href="https://kaigo.space/hearspan-ai/">Сайт</a>
     ·
@@ -24,9 +24,23 @@
 </div>
 
 > [!IMPORTANT]
-> `v0.6.0` — неподписанная Windows private beta. YooKassa работает только в тестовом режиме: реальные списания отключены. Перед установкой прочитайте [ограничения релиза](docs/releases/v0.6.0.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
+> `v0.7.1` — Windows private beta. Обновления защищены подписью Ed25519; сертификата Windows Authenticode пока нет, поэтому предупреждение SmartScreen возможно. YooKassa работает только в тестовом режиме: реальные списания отключены. Прочитайте [изменения и ограничения](docs/releases/v0.7.1.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
 
-![Активная сессия HearSpan AI 0.6.0](assets/screenshots/hearspan-session-0.6.0.png)
+![Светлая тема HearSpan AI 0.7.1](assets/screenshots/hearspan-session-0.7.1.png)
+
+## Новое В 0.7.1
+
+- **Обновления из приложения:** проверка версии в фоне, скачивание и установка по подтверждению. Во время сессии установка заблокирована.
+- **История разговоров:** локальный архив, поиск, просмотр и экспорт Markdown.
+- **Изображения в вопросе:** снимок выбранного монитора или PNG/JPEG, предпросмотр перед отправкой.
+- Светлая тема, более читаемая транскрипция и защита настроек от случайного изменения колёсиком.
+- Сжатие старого контекста в Relay с сохранением промптов и последних вопросов.
+
+Обновить старую версию нужно один раз новым установщиком, **без удаления приложения**.
+После этого новые выпуски доступны через **Приложение → Обновления**.
+Настройки, ключи и история сохраняются.
+
+![Окно обновлений: пример состояния после загрузки](assets/screenshots/hearspan-updates-0.7.1.png)
 
 ## Что такое HearSpan AI
 
@@ -54,7 +68,7 @@ HearSpan AI одновременно слышит микрофон и систе
 
 ## Быстрый старт
 
-1. Скачайте `HearSpan-Setup-0.6.0.exe` со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.6.0).
+1. Скачайте `HearSpan-Setup-0.7.1.exe` со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.7.1).
 2. Запустите стандартный мастер установки. Python не требуется.
 3. При первом открытии дождитесь автоматической активации 10-минутного trial.
 4. Откройте **Настройки → Готовность** и устраните отмеченные пункты; устройства выбираются в разделе **Звук**.
