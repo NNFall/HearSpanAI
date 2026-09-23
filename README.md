@@ -6,14 +6,14 @@
   <p>
     <img alt="Статус: private beta" src="https://img.shields.io/badge/status-private%20beta-f59e0b">
     <img alt="Платформа: Windows" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078d4">
-    <img alt="Версия: 0.8.0" src="https://img.shields.io/badge/version-0.8.0-2563eb">
+    <img alt="Версия: 0.8.1" src="https://img.shields.io/badge/version-0.8.1-2563eb">
     <img alt="Исходный код закрыт" src="https://img.shields.io/badge/source-closed-111827">
   </p>
 
   <p>
-    <a href="https://github.com/NNFall/HearSpanAI/releases/tag/v0.8.0"><strong>Скачать v0.8.0</strong></a>
+    <a href="https://github.com/NNFall/HearSpanAI/releases/latest"><strong>Скачать последнюю версию</strong></a>
     ·
-    <a href="https://kaigo.space/hearspan-ai/">Сайт</a>
+    <a href="https://hearspan-ai.ru/">Сайт</a>
     ·
     <a href="https://t.me/HearSpan_bot?start=github">Telegram-бот</a>
     ·
@@ -24,9 +24,18 @@
 </div>
 
 > [!IMPORTANT]
-> `v0.8.0` — опубликованный Windows-релиз от `2026-09-19`. Установщик подписан; сертификата Windows Authenticode пока нет, поэтому предупреждение SmartScreen возможно. YooKassa работает только в тестовом режиме: реальные списания отключены. Прочитайте [изменения 0.8.0](docs/releases/v0.8.0.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
+> Актуальный Windows-релиз: `v0.8.1`. Метаданные обновления подписаны; сертификата Windows Authenticode пока нет, поэтому предупреждение SmartScreen возможно. YooKassa работает только в тестовом режиме: реальные списания отключены. Прочитайте [изменения 0.8.1](docs/releases/v0.8.1.md), [приватность](PRIVACY.md) и [безопасность](SECURITY.md).
 
-![Светлая тема HearSpan AI 0.8.0: текущие элементы управления](assets/screenshots/hearspan-session-0.8.0.png)
+![Светлая тема HearSpan AI 0.8.0: элементы управления предыдущего выпуска](assets/screenshots/hearspan-session-0.8.0.png)
+
+## Обновление 0.8.1
+
+- Если ключ HearSpan истёк, приложение явно покажет причину и подскажет, где вставить действующий ключ.
+- При ошибке текстового запроса приложение сразу получает её от relay: повторяет запрос или показывает итоговую ошибку без лишнего ожидания.
+- При `503` Google relay быстрее переключается на запасную текстовую модель.
+- Новые установки подключаются через `hearspan-ai.ru`; прежние адреса сохранены для уже установленных клиентов.
+
+[Подробности выпуска 0.8.1](docs/releases/v0.8.1.md).
 
 ## Статус 0.8.0
 
@@ -95,7 +104,7 @@ HearSpan AI одновременно слышит микрофон и систе
 
 ## Быстрый старт
 
-1. Скачайте `HearSpan-Setup-0.8.0.exe` со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/tag/v0.8.0).
+1. Скачайте актуальный установщик со страницы [официального релиза](https://github.com/NNFall/HearSpanAI/releases/latest).
 2. Запустите стандартный мастер установки. Python не требуется.
 3. При первом открытии дождитесь автоматической активации 10-минутного trial.
 4. Откройте **Настройки → Готовность** и устраните отмеченные пункты; устройства выбираются в разделе **Звук**.

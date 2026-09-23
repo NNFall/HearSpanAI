@@ -4,7 +4,16 @@
 
 ## [Unreleased]
 
-Изменений после `v0.8.0` пока нет.
+Изменений после `v0.8.1` пока нет.
+
+## [0.8.1] — 2026-09-23
+
+- Истёкший ключ HearSpan теперь виден как отдельная ошибка с подсказкой по замене.
+- Ошибка текстового запроса сразу обрабатывается приложением: повторная попытка или итоговый статус без лишнего ожидания.
+- При `503` текстовый relay переключается на запасную модель без повторной попытки к занятой модели.
+- Новые установки подключаются через `hearspan-ai.ru`.
+
+[Заметки выпуска 0.8.1](docs/releases/v0.8.1.md) · [Релиз v0.8.1](https://github.com/NNFall/HearSpanAI/releases/tag/v0.8.1)
 
 ## [0.8.0] — 2026-09-19
 
@@ -268,7 +277,8 @@ Windows-захвата и проверяемым статусом защиты �
 - сохранение пользовательских настроек;
 - локальные диагностические логи.
 
-[Unreleased]: https://github.com/NNFall/HearSpanAI/compare/v0.8.0...HEAD
+[Unreleased]: https://github.com/NNFall/HearSpanAI/compare/v0.8.1...HEAD
+[0.8.1]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.8.1
 [0.8.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.8.0
 [0.6.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.6.0
 [0.5.0]: https://github.com/NNFall/HearSpanAI/releases/tag/v0.5.0
